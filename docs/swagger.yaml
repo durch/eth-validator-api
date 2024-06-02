@@ -1,0 +1,39 @@
+basePath: /
+info:
+  contact: {}
+paths:
+  /blockreward/{slot}:
+    get:
+      description: Get block and mev reward and mev status for slot
+      parameters:
+      - description: Slot
+        in: path
+        name: slot
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: json
+      summary: Get blockreward for slot
+  /syncduties/{slot}:
+    get:
+      description: Get validators with sync committee duties for a slot
+      parameters:
+      - description: Slot
+        in: path
+        name: slot
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: json
+      summary: Get validators with sync committee duties for a slot
+swagger: "2.0"
